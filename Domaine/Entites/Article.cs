@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domaine.Commun.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,11 +7,9 @@ using System.Threading.Tasks;
 
 namespace Domaine.Entites
 {
-     public class Article
+     public class Article : AuditableEntity<int>
     {
-        public int Id { get; set; }
         public string Name { get; set; }
-        public DateTime CreationDate { get; set; }
         public int Quantity { get; set; }
     }
 }

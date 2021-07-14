@@ -4,4 +4,8 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Domaine.Commun\Domaine.Commun.csproj" />
+  </ItemGroup>
+
 </Project>
