@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Formation0607", "Formation0607\Formation0607.csproj", "{BF9FCE08-B3CD-4CD1-A2FA-5DAB10333B91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Formation0607\Api.csproj", "{BF9FCE08-B3CD-4CD1-A2FA-5DAB10333B91}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domaine", "Domaine\Domaine.csproj", "{0EC341B4-3409-44AA-B09F-FB4F35A02FAD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{BFD68E3A-2795-4E9C-B2E9-460EEC8FEC3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domaine.Commun", "Domaine.Commun\Domaine.Commun.csproj", "{56DCA512-417A-4022-9254-2FF35307E582}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domaine.Commun", "Domaine.Commun\Domaine.Commun.csproj", "{56DCA512-417A-4022-9254-2FF35307E582}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
