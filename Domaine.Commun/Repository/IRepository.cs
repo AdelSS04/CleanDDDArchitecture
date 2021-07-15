@@ -13,6 +13,7 @@ namespace Domaine.Commun.Repository
     }
     public interface IRepository<TEntity, TPrimaryKey> : IRepository where TEntity : class, Entities.Interfaces.IEntity<TPrimaryKey>
     {
+        IUnitOfWork UnitOfWork { get; }
 
         #region Select/Get/Query
 
