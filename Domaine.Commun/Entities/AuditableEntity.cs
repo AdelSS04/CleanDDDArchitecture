@@ -12,7 +12,7 @@ namespace Domaine.Commun.Entities
 
         public int? CreatedBy { get; set; }
 
-        public DateTime? LastModified { get; set; }
+        public DateTime? LastModified { get; set; } = null;
 
         public int? LastModifiedBy { get; set; }
        

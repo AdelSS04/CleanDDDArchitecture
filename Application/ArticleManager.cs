@@ -1,5 +1,6 @@
 ﻿using Application.Interfaces;
 using Domaine.Entites;
+using Domaine.RepositoryInterfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,34 +11,34 @@ namespace Application
 {
     public class ArticleManager : IArticleManager
     {
-        private List<Article> articles;
-        public ArticleManager()
+        private readonly IRepositoryProduct repositoryProduct;
+
+        public ArticleManager(IRepositoryProduct repositoryProduct)
         {
-            articles = new List<Article>();
+            this.repositoryProduct = repositoryProduct;
         }
         public async Task AddArticle(Article article)
         {
-            articles.Add(article);
+            repositoryProduct.AddAsync(article);
         }
 
         public Article GetArticle(int id)
         {
-            return articles.FirstOrDefault(x => x.Id == id);
+            return GetAll().FirstOrDefault(x => x.Id == id);
         }
 
         public async Task RemoveArticle(Article article)
         {
-            articles.Remove(article);
+            GetAll().Remove(article);
         }
         public List<Article> GetAll()
         {
-            return articles.ToList();
+            return repositoryProduct.GetAll().ToList();
         }
         public async Task EditArticle (Article article,string name)
         {
-            articles.Remove(article);
-            article.Name = name;
-            articles.Add(article);
+           
+
         }
 
     }

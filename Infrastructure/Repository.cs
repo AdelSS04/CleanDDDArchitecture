@@ -9,7 +9,7 @@ namespace Infrastructure
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class, new()
     {
-        public Task<TEntity> AddAsync(TEntity entity)
+        public Task AddAsync(TEntity entity)
         {
             throw new NotImplementedException();
         }

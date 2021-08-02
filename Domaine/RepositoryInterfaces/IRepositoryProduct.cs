@@ -9,6 +9,5 @@ namespace Domaine.RepositoryInterfaces
 {
     public interface  IRepositoryProduct : IRepository<Article>
     {
-
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Application.Interfaces;
 using Domaine.Entites;
+using Domaine.RepositoryInterfaces;
 using Formation0607.Filters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -24,6 +25,7 @@ namespace Formation0607.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
+
             var Article = articleManager.GetArticle(id);
             if (Article == null)
                 return NotFound("Article Doesnt exist");
@@ -43,7 +45,7 @@ namespace Formation0607.Controllers
         public IActionResult CreateArticle(Article article)
         {
             if (articleManager.GetArticle(article.Id) != null)
-                return new JsonResult("Article exist");
+               return new JsonResult("Article exist");
             articleManager.AddArticle(article);
             return Ok("Product Add");
         }
@@ -51,11 +53,13 @@ namespace Formation0607.Controllers
         public ActionResult<List<Article>> GetAll()
         {
             var article = articleManager.GetAll();
-            return article.Count == 0 ? NoContent() : Ok(article);
+            return article.ToList().Count == 0 ? NoContent() : Ok(article);
         }
         [HttpPut("{id}")]
         public ActionResult<List<Article>> GetAll(int id, [FromBody] string name)
         {
+            return Ok(new Article());
+
             var article = articleManager.GetArticle(id);
 
             if (article == null)

@@ -1,6 +1,8 @@
 ﻿using Domaine.Entites;
 using Domaine.RepositoryInterfaces;
+using Infrastructure.context;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,14 +12,27 @@ namespace Infrastructure
 {
     public class RepositoryProduct : IRepositoryProduct
     {
-        public Task<Article> AddAsync(Article entity)
+        private ClientContext clientContext;
+
+        //private List<Article> InMemoryArticle;
+
+        public RepositoryProduct(ClientContext clientContext)
         {
-            throw new NotImplementedException();
+            this.clientContext = clientContext;
+        }
+
+
+        public Task AddAsync(Article entity)
+        {
+            clientContext.Add(entity);
+            clientContext.SaveChanges();
+
+            return Task.CompletedTask; 
         }
 
         public IEnumerable<Article> GetAll()
         {
-            throw new NotImplementedException();
+            return clientContext.Articles.AsEnumerable();
         }
 
         public Task<Article> UpdateAsync(Article entity)

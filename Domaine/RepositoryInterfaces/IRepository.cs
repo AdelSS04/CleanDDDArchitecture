@@ -10,7 +10,7 @@ namespace Domaine.RepositoryInterfaces
     {
         public IEnumerable<TEntity> GetAll();
 
-        Task<TEntity> AddAsync(TEntity entity);
+        Task AddAsync(TEntity entity);
 
         Task<TEntity> UpdateAsync(TEntity entity);
 
