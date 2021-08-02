@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domaine.Commun", "Domaine.C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrasructure", "Infrasructure", "{82EC59DB-3642-4A6F-86AB-EFCB61F75207}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonUtils", "JsonUtils\JsonUtils.csproj", "{155252B6-4623-4994-9B57-3027F6753ADB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonUtils", "JsonUtils\JsonUtils.csproj", "{155252B6-4623-4994-9B57-3027F6753ADB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{6E6DAE39-114C-4645-9962-C70FD3E2A18C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{155252B6-4623-4994-9B57-3027F6753ADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{155252B6-4623-4994-9B57-3027F6753ADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{155252B6-4623-4994-9B57-3027F6753ADB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E6DAE39-114C-4645-9962-C70FD3E2A18C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E6DAE39-114C-4645-9962-C70FD3E2A18C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E6DAE39-114C-4645-9962-C70FD3E2A18C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E6DAE39-114C-4645-9962-C70FD3E2A18C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
