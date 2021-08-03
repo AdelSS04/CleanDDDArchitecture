@@ -8,7 +8,7 @@ namespace Domaine.Commun.Entities
 {
     public abstract class AuditableEntity<TPrimaryKey> : Entity<TPrimaryKey>, IAuditableEntity
     {
-        public DateTime? Created { get; set; }
+        public DateTime? Created { get;  set; }
 
         public int? CreatedBy { get; set; }
 

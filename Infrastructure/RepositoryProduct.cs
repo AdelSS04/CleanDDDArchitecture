@@ -35,14 +35,17 @@ namespace Infrastructure
             return clientContext.Articles.AsEnumerable();
         }
 
-        public Task<Article> UpdateAsync(Article entity)
+        public async Task<Article> UpdateAsync(Article entity)
         {
-            throw new NotImplementedException();
+           var values = clientContext.Articles.Update(entity);
+            await clientContext.SaveChangesAsync();
+            return values.Entity;
         }
 
-        public Task UpdateRangeAsync(List<Article> entities)
+        public async Task UpdateRangeAsync(List<Article> entities)
         {
-            throw new NotImplementedException();
+            clientContext.Articles.UpdateRange(entities);
+            await clientContext.SaveChangesAsync();
         }
     }
 }
